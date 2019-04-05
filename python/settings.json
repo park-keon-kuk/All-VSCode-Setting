@@ -1,0 +1,48 @@
+{
+    // python
+    "python.pythonPath": "env\\Scripts\\python.exe",
+
+
+    // python lint
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.maxNumberOfProblems": 100,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=no-member", // 이런 맴버는 없는데?
+        "--disable=missing-docstring", // 설명문이 빠지지 않았냐?
+        "--disable=invalid-name", // 상수를 왜 대문자로 쓰지 않냐?
+        "--disable=unused-import", // 안 쓰는데 왜 import 하냐?
+        "--disable=wrong-import-position", // import 위치 왜 그러냐?
+        "--disable=no-name-in-module", // 그런 이름 모듈에 없는데?
+        "--disable=import-error", // import 할 수 없는데?
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=F401", // 안 쓰는데 왜 import 하냐?
+    ],
+
+
+    // python format
+    "python.formatting.provider": "autopep8",
+
+
+    // *.py
+    "[python]": {
+        // 편집기 창에 세로 줄을 제공합니다.(80자 제한)
+        "editor.rulers": [79], // 0부터라 79위치에 선을 둡니다.
+        // 저장할 때 format이 적용되도록 합니다.
+        "editor.formatOnSave": true,
+        // 줄의 서식 여부는 묻지 않도록 합니다.
+        "editor.formatOnType": false,
+        // 포맷 최대 시간을 제공합니다. 컴퓨터가 안 좋을 수록 길게 줍니다.
+        "editor.formatOnSaveTimeout": 750
+    },
+
+    
+    // 개발 중 필요없는 파일을 보이지 않도록 합니다.
+    "files.exclude": {
+        "**/__pycache__": true, // python 캐시 폴더
+        "**/env":true, // 내 python 가상환경
+    }
+}
