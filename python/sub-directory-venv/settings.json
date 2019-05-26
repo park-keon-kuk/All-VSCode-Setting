@@ -1,0 +1,26 @@
+{
+    // Python
+    "python.pythonPath": "server\\env\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "server\\env\\Scripts\\pylint.exe",
+    "python.linting.pylintArgs": [
+        "--disable=no-member", // 이런 맴버는 없는데?
+        "--disable=missing-docstring", // 설명하는 문장이 빠졌는데?
+        "--disable=invalid-name", // 상수를 왜 대문자로 쓰지 않냐?
+        "--disable=unused-import", // 안 쓰는데 왜 import 하냐?
+        // "--disable=wrong-import-position", // import 위치 왜 그러냐?
+        "--disable=no-name-in-module", // 그런 이름은 모듈에 없는데?
+        // "--disable=import-error", // import 할 수 없는데?
+    ],
+    "python.linting.pep8Enabled": true,
+    "python.linting.pep8Path": "server\\env\\Scripts\\pep8.exe",
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Path": "server\\env\\Scripts\\autopep8.exe",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveTimeout": 750,
+    }
+}
